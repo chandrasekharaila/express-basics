@@ -84,9 +84,9 @@ app.delete("/deleteMarks/:id/:sub", (req, res) => {
         } else {
             res.status(404).send({error : "subject not found"})
         }
-    }
+    }  
     else {
-        res.status(404).send({error: "no student found"})
+        res.status(404).send({error: "no student has been found"})
     }
 }) 
 
