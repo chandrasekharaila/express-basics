@@ -88,7 +88,7 @@ app.delete("/deleteMarks/:id/:sub", (req, res) => {
     else {
         res.status(404).send({error: "no student found"})
     }
-})
+}) 
 
 app.listen(port, () => {
     console.log(`server is running at ${port}`)
