@@ -5,7 +5,7 @@ const port = 3000
 
 app.use(bodyParser.json())
 
-
+ 
 let students = [{ id: 1, name: "tarun", marks : { maths: 100,physics: 200, chemistry:300}},
                 { id: 2, name: "tarun2", marks : { maths: 101,physics: 201, chemistry:301}}
 ]
