@@ -6,12 +6,10 @@ const port = 3000
 app.use(bodyParser.json())
 
 
-//internalMemoryArrayofObjects
 let students = [{ id: 1, name: "tarun", marks : { maths: 100,physics: 200, chemistry:300}},
                 { id: 2, name: "tarun2", marks : { maths: 101,physics: 201, chemistry:301}}
 ]
 
-//get marks with query param
 app.get("/marks", (req, res) => {
     let studentId = parseInt(req.query.id)
     let student = students.find((stu) => stu.id === studentId)
@@ -24,7 +22,6 @@ app.get("/marks", (req, res) => {
 
 })
 
-//get marks with path param
 app.get("/marks/:id", (req, res) => {
     let studentId = parseInt(req.params.id)
     let student = students.find((stu) => stu.id === studentId)
@@ -35,7 +32,6 @@ app.get("/marks/:id", (req, res) => {
     }
 })
 
-//add marks to a student using post with body param
 app.post("/addmarks", (req,res) => {
     const studentId = parseInt(req.body.id);
     const subject = req.body.sub;
