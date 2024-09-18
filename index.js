@@ -17,11 +17,11 @@ app.get("/marks", (req, res) => {
     if (student) {
         res.send(student)
     } else {
-        res.status(404).send({error: "student not found"})
+        res.status(404).send({error: "No student found"})
     }
 
 })
-
+  
 app.get("/marks/:id", (req, res) => {
     let studentId = parseInt(req.params.id)
     let student = students.find((stu) => stu.id === studentId)
